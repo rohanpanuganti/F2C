@@ -5,9 +5,7 @@
   "permissions": [
     "tabs",
     "activeTab",
-    "http://*/",
-    "https://*/",
-    "*://*/*"
+    "https://*.youtube.com/*"
   ],
   "background": {
     "scripts": [
@@ -18,7 +16,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*/*"
+        "https://*.youtube.com/*"
       ],
       "js": [
         "inject.js"
