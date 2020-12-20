@@ -11,13 +11,14 @@
     "scripts": [
       "background.js"
     ],
-    "persistent": true
+    "persistent": false
   },
   "content_scripts": [
     {
       "matches": [
         "https://*.youtu/*be/*/*"
       ],
+      "run_at": "document_end",
       "js": [
         "inject.js"
       ]
@@ -31,5 +32,6 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
+  
   "manifest_version": 2
 }
