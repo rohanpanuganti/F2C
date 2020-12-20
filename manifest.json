@@ -1,0 +1,37 @@
+{
+  "name": "F2C",
+  "description": "Free to Comment V2",
+  "version": "0.1.0",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "http://*/",
+    "https://*/",
+    "*://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Make a comment!"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "manifest_version": 2
+}
