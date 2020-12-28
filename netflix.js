@@ -1,12 +1,9 @@
 var disqus_config = function () {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const id = urlParams.get('jbv');
     this.page.url = '${window.location.href}';  
     this.page.identifier = '${window.location.href.replace(/\D/g, "")}';
 };
 
-(function () { // DON'T EDIT BELOW THIS LINE
+(function () {
     var d = document, s = d.createElement('script');
     s.src = 'https://netflix-com.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
